@@ -9,13 +9,14 @@ public class Debug1 {
 public void findAbc(String input) {
     int index = input.indexOf("abc");
     while (true) {
-        if (index == -1 || index >= input.length() - 3||index+4>=input.length()) {
-            System.out.println("Broken");
+        if (index == -1 || index >= input.length() - 3) {
+            System.out.println(index);
             break;
         }
+        System.out.println(index);
         String found = input.substring(index+1, index+4);
         System.out.println(found);
-        index = input.indexOf("abc", index+4);
+        index = input.indexOf("abc", index+3);
         
     }
 }
@@ -24,8 +25,8 @@ public void findAbc(String input) {
     //String input= "abcdabc";
     //findAbc( input);
     
-    findAbc("yabcyabc");
-    findAbc("abcbbbabcdddabc");
+    findAbc("abcabcabcabca");
+    //findAbc("abcbbbabcdddabc");
     
     
     
